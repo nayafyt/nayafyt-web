@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Archivo", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  --color-primary: #18181B;
+  --color-secondary: #3F3F46;
+  --color-accent: #2563EB;
+  --color-accent-light: #3B82F6;
+  --color-bg: #FAFAFA;
+  --color-bg-alt: #F4F4F5;
+  --color-text: #09090B;
+  --color-text-muted: #52525B;
+  --color-border: #E4E4E7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.stagger-children .animate-on-scroll:nth-child(1) { transition-delay: 0ms; }
+.stagger-children .animate-on-scroll:nth-child(2) { transition-delay: 100ms; }
+.stagger-children .animate-on-scroll:nth-child(3) { transition-delay: 200ms; }
+.stagger-children .animate-on-scroll:nth-child(4) { transition-delay: 300ms; }
+.stagger-children .animate-on-scroll:nth-child(5) { transition-delay: 400ms; }
+.stagger-children .animate-on-scroll:nth-child(6) { transition-delay: 500ms; }
+.stagger-children .animate-on-scroll:nth-child(7) { transition-delay: 600ms; }
+.stagger-children .animate-on-scroll:nth-child(8) { transition-delay: 700ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
