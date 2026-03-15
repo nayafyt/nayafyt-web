@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Naya Fytali",
   title: "Software Engineer",
   location: "Athens, Greece",
-  email: "nfytali@gmail.com",
+  email: "contact@nayafyt.com",
   linkedin: "https://linkedin.com/in/nayafytali",
   github: "https://github.com/nayafyt",
 };
