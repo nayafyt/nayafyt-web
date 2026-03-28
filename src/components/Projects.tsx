@@ -1,4 +1,4 @@
-import { ExternalLink, FolderGit2 } from "lucide-react";
+import { ExternalLink, FolderGit2, Lightbulb } from "lucide-react";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
@@ -10,7 +10,7 @@ export default function Projects() {
         </h2>
         <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+        <div className="mt-12 grid sm:grid-cols-2 gap-6 stagger-children">
           {projects.map((project, i) => (
             <a
               key={i}
@@ -36,9 +36,19 @@ export default function Projects() {
                 {project.title}
               </h3>
 
-              <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">
+              <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
                 {project.description}
               </p>
+
+              <div className="mt-4 flex items-start gap-2 px-3 py-2.5 rounded-lg bg-[var(--color-accent)]/5 border border-[var(--color-accent)]/10 flex-1">
+                <Lightbulb
+                  size={14}
+                  className="text-[var(--color-accent)] mt-0.5 shrink-0"
+                />
+                <p className="text-xs text-[var(--color-accent)] leading-relaxed italic">
+                  {project.highlight}
+                </p>
+              </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tech.split(", ").map((t) => (

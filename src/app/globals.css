@@ -51,6 +51,12 @@ h1, h2, h3, h4, h5, h6 {
 .stagger-children .animate-on-scroll:nth-child(7) { transition-delay: 600ms; }
 .stagger-children .animate-on-scroll:nth-child(8) { transition-delay: 700ms; }
 
+/* Hero dot grid background */
+.hero-dots {
+  background-image: radial-gradient(circle, var(--color-border) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-on-scroll {
     opacity: 1;

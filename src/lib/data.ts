@@ -31,7 +31,7 @@ export const experience = [
     role: "Research Intern",
     company: "INSANE Group, NCSR Demokritos",
     location: "Athens, Greece",
-    period: "Nov 2025 – Present",
+    period: "Nov 2025 – Mar 2026",
     points: [
       "Generalized a Physics-Guided Neural Network pipeline into a framework-agnostic implementation, enabling new physics problems to be onboarded without modifying core logic",
       "Decoupled data preprocessing, model training, and evaluation stages to improve maintainability and reusability",
@@ -61,24 +61,35 @@ export const projects = [
     tech: "Python, PyTorch, Physics-informed ML",
     description:
       "Framework-agnostic inverse design pipeline enabling new physics problems to be onboarded without modifying core logic.",
+    highlight:
+      "Learned how to decouple ML pipelines so that swapping a physics model doesn't break the whole system.",
     link: "https://github.com/nayafyt/Physics-guided-Neural-Network-Inverse-Design-Pipeline",
   },
   {
     title: "IMDB Review Classifier",
     tech: "Python, Scikit-learn, NLP",
-    description: "Sentiment analysis using TF-IDF and Logistic Regression.",
+    description:
+      "Sentiment analysis comparing TF-IDF + Logistic Regression against bag-of-words approaches on 50k reviews.",
+    highlight:
+      "First deep dive into NLP - discovered how much feature engineering matters before any model tuning.",
     link: "https://github.com/nayafyt/IMDB-Review-Classifier",
   },
   {
     title: "Reversi Game Implementation",
     tech: "Python",
-    description: "Console-based game with heuristic AI logic.",
+    description:
+      "Console-based Reversi with a minimax AI opponent and heuristic board evaluation.",
+    highlight:
+      "Built the AI from scratch - a great exercise in game trees and thinking about search depth trade-offs.",
     link: "https://github.com/nayafyt/Reversi",
   },
   {
     title: "Technico E-Shop",
     tech: ".NET Core, SQL Server, Angular",
-    description: "Full-stack e-commerce app built during Accenture training.",
+    description:
+      "Full-stack e-commerce platform with auth, inventory management, and order processing.",
+    highlight:
+      "My first .NET and Angular project - connected all the dots from database schema to UI.",
     link: "https://github.com/nayafyt/Technico_BackEnd",
   },
 ];

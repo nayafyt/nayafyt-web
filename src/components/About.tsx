@@ -12,16 +12,16 @@ export default function About() {
         <div className="mt-12 grid md:grid-cols-2 gap-12">
           <div className="animate-on-scroll">
             <p className="text-[var(--color-text-muted)] leading-relaxed text-lg">
-              I&apos;m a Software Engineer based in Athens, Greece with a passion
-              for building robust enterprise applications. With a BSc in
-              Information Technology from AUEB and experience at Netcompany, I
-              specialize in full-stack development using Java, React, and modern
-              web technologies.
+              I like understanding how things work — whether that&apos;s a distributed
+              system at scale or a neural network learning physics. Right now I
+              split my time between building enterprise software at Netcompany and
+              doing ML research at NCSR Demokritos, which keeps things interesting.
             </p>
             <p className="mt-4 text-[var(--color-text-muted)] leading-relaxed text-lg">
-              Alongside my industry work, I contribute to research at NCSR
-              Demokritos, working on Physics-Guided Neural Networks with Python
-              and PyTorch.
+              I studied Information Technology at AUEB with a focus on
+              Cybersecurity, and I&apos;ve found my sweet spot at the intersection of
+              solid engineering and scientific computing. I care about writing code
+              that&apos;s maintainable, not just code that works.
             </p>
 
             <div className="mt-8">

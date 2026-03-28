@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
+{ label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
@@ -48,14 +48,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium px-4 py-2 rounded-lg bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-light)] transition-colors duration-200 cursor-pointer"
-          >
-            Resume
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -81,14 +73,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium px-4 py-2 rounded-lg bg-[var(--color-accent)] text-white text-center hover:bg-[var(--color-accent-light)] transition-colors duration-200 cursor-pointer"
-          >
-            Resume
-          </a>
         </div>
       )}
     </nav>

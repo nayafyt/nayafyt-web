@@ -4,8 +4,11 @@ import { personalInfo } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 pt-24">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden">
+      {/* Subtle dot grid background */}
+      <div className="absolute inset-0 hero-dots opacity-40" />
+
+      <div className="relative max-w-3xl mx-auto text-center">
         <div className="animate-on-scroll flex justify-center mb-8">
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-[var(--color-border)] ring-offset-4 ring-offset-[var(--color-bg)]">
             <Image
@@ -30,8 +33,8 @@ export default function Hero() {
         </h1>
 
         <p className="animate-on-scroll mt-6 text-xl sm:text-2xl text-[var(--color-text-muted)] font-light max-w-2xl mx-auto leading-relaxed">
-          {personalInfo.title} crafting enterprise web applications with modern
-          technologies
+          Software Engineer — into web apps, ML, and anything with a
+          good algorithm.
         </p>
 
         <div className="animate-on-scroll mt-10 flex items-center justify-center gap-4 flex-wrap">
