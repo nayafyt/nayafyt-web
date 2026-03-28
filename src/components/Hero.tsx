@@ -33,7 +33,7 @@ export default function Hero() {
         </h1>
 
         <p className="animate-on-scroll mt-6 text-xl sm:text-2xl text-[var(--color-text-muted)] font-light max-w-2xl mx-auto leading-relaxed">
-          Software Engineer — into web apps, ML, and anything with a
+          Software Engineer - into web apps, ML, and anything with a
           good algorithm.
         </p>
 
