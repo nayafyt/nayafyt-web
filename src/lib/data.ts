@@ -84,7 +84,7 @@ export const projects = [
   },
   {
     title: "Technico E-Shop",
-    tech: [".NET Core", "SQL Server", "Angular"],
+    tech: ["C#", ".NET Core", "SQL Server", "Angular"],
     description:
       "Full-stack e-commerce platform with auth, inventory management, and order processing.",
     highlight:
