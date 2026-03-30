@@ -4,10 +4,10 @@ export default function About() {
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-          About Me
-        </h2>
-        <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
+        <div className="animate-on-scroll">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">About Me</h2>
+          <div className="mt-2 w-10 h-0.5 bg-[var(--color-accent)]" />
+        </div>
 
         <div className="mt-12 grid md:grid-cols-2 gap-12">
           <div className="animate-on-scroll">
@@ -50,7 +50,7 @@ export default function About() {
                 {skills.languages.map((skill) => (
                   <span
                     key={skill}
-                    className="animate-on-scroll px-4 py-2 rounded-lg bg-[var(--color-primary)] text-white text-sm font-medium"
+                    className="animate-on-scroll px-4 py-2 rounded-lg bg-[var(--color-accent)]/15 text-[var(--color-accent)] text-sm font-medium"
                   >
                     {skill}
                   </span>

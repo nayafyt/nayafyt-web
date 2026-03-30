@@ -5,12 +5,9 @@ import { personalInfo } from "@/lib/data";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden">
-      {/* Subtle dot grid background */}
-      <div className="absolute inset-0 hero-dots opacity-40" />
-
       <div className="relative max-w-3xl mx-auto text-center">
         <div className="animate-on-scroll flex justify-center mb-8">
-          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-4 ring-[var(--color-border)] ring-offset-4 ring-offset-[var(--color-bg)]">
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden ring-2 ring-[var(--color-accent)]/40 ring-offset-4 ring-offset-[var(--color-bg)]">
             <Image
               src="/naya.jpeg"
               alt="Naya Fytali"
@@ -40,7 +37,7 @@ export default function Hero() {
         <div className="animate-on-scroll mt-10 flex items-center justify-center gap-4 flex-wrap">
           <a
             href="#contact"
-            className="px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-secondary)] transition-colors duration-200"
+            className="px-8 py-3 rounded-xl bg-[var(--color-primary)] text-[var(--color-bg)] font-medium hover:bg-[var(--color-secondary)] transition-colors duration-200"
           >
             Get in Touch
           </a>

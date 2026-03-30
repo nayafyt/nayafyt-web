@@ -5,16 +5,16 @@ export default function Education() {
   return (
     <section id="education" className="py-24 px-6 bg-[var(--color-bg-alt)]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-          Education
-        </h2>
-        <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
+        <div className="animate-on-scroll">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">Education</h2>
+          <div className="mt-2 w-10 h-0.5 bg-[var(--color-accent)]" />
+        </div>
 
         <div className="mt-12 space-y-6">
           {education.map((edu, i) => (
             <div
               key={i}
-              className="animate-on-scroll bg-white rounded-2xl p-8 border border-[var(--color-border)]"
+              className="animate-on-scroll bg-[var(--color-bg-alt)] rounded-2xl p-8 border border-[var(--color-border)]"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                 <div className="flex items-start gap-4">

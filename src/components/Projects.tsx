@@ -5,10 +5,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-          Projects
-        </h2>
-        <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
+        <div className="animate-on-scroll">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">Projects</h2>
+          <div className="mt-2 w-10 h-0.5 bg-[var(--color-accent)]" />
+        </div>
 
         <div className="mt-12 grid sm:grid-cols-2 gap-6 stagger-children">
           {projects.map((project, i) => (
@@ -17,7 +17,7 @@ export default function Projects() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-on-scroll group bg-white rounded-2xl p-6 border border-[var(--color-border)] hover:shadow-lg hover:border-[var(--color-accent)]/30 transition-all duration-300 flex flex-col"
+              className="animate-on-scroll group bg-[var(--color-bg-alt)] rounded-2xl p-6 border border-[var(--color-border)] hover:shadow-lg hover:border-[var(--color-accent)]/30 transition-all duration-300 flex flex-col"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center">

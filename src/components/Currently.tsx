@@ -14,12 +14,10 @@ export default function Currently() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] warm-glow" />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="animate-on-scroll flex items-baseline gap-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-            What I&apos;m Up To
-          </h2>
+        <div className="animate-on-scroll">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">What I&apos;m Up To</h2>
+          <div className="mt-2 w-10 h-0.5 bg-[var(--color-accent)]" />
         </div>
-        <div className="mt-2 w-12 h-[2px] bg-[var(--color-accent)] animate-on-scroll" />
 
         <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 stagger-children">
           {currently.map((item, i) => {

@@ -5,20 +5,20 @@ export default function Volunteer() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-          Volunteer Experience
-        </h2>
-        <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
+        <div className="animate-on-scroll">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">Volunteer Experience</h2>
+          <div className="mt-2 w-10 h-0.5 bg-[var(--color-accent)]" />
+        </div>
 
         <div className="mt-12 grid sm:grid-cols-2 gap-6 stagger-children">
           {volunteer.map((vol, i) => (
             <div
               key={i}
-              className="animate-on-scroll bg-white rounded-2xl p-6 border border-[var(--color-border)]"
+              className="animate-on-scroll bg-[var(--color-bg-alt)] rounded-2xl p-6 border border-[var(--color-border)]"
             >
               <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center">
-                  <Heart size={18} className="text-rose-500" />
+                <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center">
+                  <Heart size={18} className="text-[var(--color-accent)]" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[var(--color-primary)]">
