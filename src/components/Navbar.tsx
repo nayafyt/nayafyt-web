@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
-{ label: "Experience", href: "#experience" },
+  { label: "Currently", href: "#currently" },
+  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
@@ -25,14 +27,14 @@ export default function Navbar() {
     <nav
       className={`fixed top-4 left-4 right-4 z-50 rounded-2xl transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 shadow-lg backdrop-blur-md border border-[var(--color-border)]"
+          ? "bg-[var(--color-bg-alt)]/90 shadow-lg backdrop-blur-md border border-[var(--color-border)]"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-primary)]"
+          className="font-[family-name:var(--font-heading)] text-lg font-bold text-[var(--color-primary)] drop-shadow-[0_0_8px_var(--color-accent)] transition-all duration-200"
         >
           NF
         </a>
@@ -48,16 +50,20 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <ThemeToggle />
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile controls */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

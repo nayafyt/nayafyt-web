@@ -1,6 +1,7 @@
 "use client";
 
 import { useScrollAnimation } from "@/lib/useScrollAnimation";
+import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -17,6 +18,8 @@ export default function Home() {
 
   return (
     <>
+      <CustomCursor />
+
       <Navbar />
       <main>
         <Hero />
