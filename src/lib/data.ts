@@ -1,6 +1,5 @@
 export const personalInfo = {
   name: "Naya Fytali",
-  title: "Software Engineer",
   location: "Athens, Greece",
   email: "contact@nayafyt.com",
   linkedin: "https://linkedin.com/in/nayafytali",
@@ -58,7 +57,7 @@ export const education = [
 export const projects = [
   {
     title: "Physics-guided Neural Network Pipeline",
-    tech: "Python, PyTorch, Physics-informed ML",
+    tech: ["Python", "PyTorch", "Physics-informed ML"],
     description:
       "Framework-agnostic inverse design pipeline enabling new physics problems to be onboarded without modifying core logic.",
     highlight:
@@ -67,7 +66,7 @@ export const projects = [
   },
   {
     title: "IMDB Review Classifier",
-    tech: "Python, Scikit-learn, NLP",
+    tech: ["Python", "Scikit-learn", "NLP"],
     description:
       "Sentiment analysis comparing TF-IDF + Logistic Regression against bag-of-words approaches on 50k reviews.",
     highlight:
@@ -76,7 +75,7 @@ export const projects = [
   },
   {
     title: "Reversi Game Implementation",
-    tech: "Python",
+    tech: ["Python"],
     description:
       "Console-based Reversi with a minimax AI opponent and heuristic board evaluation.",
     highlight:
@@ -85,7 +84,7 @@ export const projects = [
   },
   {
     title: "Technico E-Shop",
-    tech: ".NET Core, SQL Server, Angular",
+    tech: [".NET Core", "SQL Server", "Angular"],
     description:
       "Full-stack e-commerce platform with auth, inventory management, and order processing.",
     highlight:

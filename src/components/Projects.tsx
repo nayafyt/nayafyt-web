@@ -51,7 +51,7 @@ export default function Projects() {
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                {project.tech.split(", ").map((t) => (
+                {project.tech.map((t) => (
                   <span
                     key={t}
                     className="px-2 py-1 text-xs rounded-md bg-[var(--color-bg-alt)] text-[var(--color-text-muted)] font-medium"
