@@ -28,25 +28,25 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="animate-on-scroll font-[family-name:var(--font-heading)] text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[var(--color-primary)] leading-tight">
+        <h1 className="animate-on-scroll text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[var(--color-primary)] leading-tight">
           {personalInfo.name}
         </h1>
 
         <p className="animate-on-scroll mt-6 text-xl sm:text-2xl text-[var(--color-text-muted)] font-light max-w-2xl mx-auto leading-relaxed">
-          Software Engineer - into web apps, ML, and anything with a
+          Software Engineer - into web apps, ML and anything with a
           good algorithm.
         </p>
 
         <div className="animate-on-scroll mt-10 flex items-center justify-center gap-4 flex-wrap">
           <a
             href="#contact"
-            className="px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-secondary)] transition-colors duration-200 cursor-pointer"
+            className="px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-secondary)] transition-colors duration-200"
           >
             Get in Touch
           </a>
           <a
             href="#experience"
-            className="px-8 py-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text)] font-medium hover:bg-[var(--color-bg-alt)] transition-colors duration-200 cursor-pointer"
+            className="px-8 py-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text)] font-medium hover:bg-[var(--color-bg-alt)] transition-colors duration-200"
           >
             View My Work
           </a>
@@ -56,7 +56,7 @@ export default function Hero() {
           <a
             href="#about"
             aria-label="Scroll to about section"
-            className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors duration-200 cursor-pointer animate-bounce"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-[var(--color-border)] text-[var(--color-text-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors duration-200 animate-bounce"
           >
             <ArrowDown size={18} />
           </a>

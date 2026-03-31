@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 bg-[var(--color-primary)]">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="animate-on-scroll font-[family-name:var(--font-heading)] text-3xl sm:text-4xl font-bold text-white">
+        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-white">
           Let&apos;s Connect
         </h2>
         <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full mx-auto animate-on-scroll" />
@@ -48,7 +48,7 @@ export default function Contact() {
               href={link.href}
               target={link.label !== "Email" ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="animate-on-scroll group flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[var(--color-accent)]/50 transition-all duration-300 cursor-pointer"
+              className="animate-on-scroll group flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-[var(--color-accent)]/50 transition-all duration-300"
             >
               <link.icon
                 size={22}

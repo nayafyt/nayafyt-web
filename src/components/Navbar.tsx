@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
         <a
           href="#"
-          className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-primary)] cursor-pointer"
+          className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-primary)]"
         >
           NF
         </a>
@@ -43,7 +43,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200 cursor-pointer"
+              className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 cursor-pointer"
+          className="md:hidden p-2"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -68,7 +68,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200 cursor-pointer py-2"
+              className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200 py-2"
             >
               {link.label}
             </a>

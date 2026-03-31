@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="animate-on-scroll font-[family-name:var(--font-heading)] text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
+        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
           About Me
         </h2>
         <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
@@ -12,7 +12,7 @@ export default function About() {
         <div className="mt-12 grid md:grid-cols-2 gap-12">
           <div className="animate-on-scroll">
             <p className="text-[var(--color-text-muted)] leading-relaxed text-lg">
-              I like understanding how things work — whether that&apos;s a distributed
+              I like understanding how things work - whether that&apos;s a distributed
               system at scale or a neural network learning physics. Right now I
               split my time between building enterprise software at Netcompany and
               doing ML research at NCSR Demokritos, which keeps things interesting.

@@ -5,7 +5,7 @@ export default function Education() {
   return (
     <section id="education" className="py-24 px-6 bg-[var(--color-bg-alt)]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="animate-on-scroll font-[family-name:var(--font-heading)] text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
+        <h2 className="animate-on-scroll text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
           Education
         </h2>
         <div className="mt-2 w-16 h-1 bg-[var(--color-accent)] rounded-full animate-on-scroll" />
