@@ -45,7 +45,7 @@ export default function Hero() {
             Get in Touch
           </a>
           <a
-            href="#experience"
+            href="#projects"
             className="px-8 py-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text)] font-medium hover:bg-[var(--color-bg-alt)] transition-colors duration-200"
           >
             View My Work
