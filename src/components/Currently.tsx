@@ -34,7 +34,7 @@ export default function Currently() {
                   <div className="w-10 h-10 rounded-lg bg-[var(--color-accent)]/10 flex items-center justify-center mb-4">
                     {Icon && <Icon size={20} className="text-[var(--color-accent)]" />}
                   </div>
-                  <h3 className="script text-sm mb-1">
+                  <h3 className="text-sm font-medium text-[var(--color-accent)] mb-1">
                     {item.label}
                   </h3>
                   <p className="text-sm text-[var(--color-secondary)] leading-snug">
