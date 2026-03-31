@@ -3,6 +3,7 @@
 @theme {
   --font-heading: "Archivo", sans-serif;
   --font-body: "Space Grotesk", sans-serif;
+  --font-script: "Playfair Display", serif;
 
   --color-primary: #18181B;
   --color-secondary: #3F3F46;
@@ -55,6 +56,31 @@ h1, h2, h3, h4, h5, h6 {
 .hero-dots {
   background-image: radial-gradient(circle, var(--color-border) 1px, transparent 1px);
   background-size: 28px 28px;
+}
+
+/* Mood board card */
+.mood-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mood-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
+  transform: rotate(0deg) !important;
+}
+
+/* Script / editorial italic accent */
+.script {
+  font-family: var(--font-script);
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* Warm glow effect */
+.warm-glow {
+  background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.06) 0%, transparent 70%);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Space_Grotesk } from "next/font/google";
+import { Archivo, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -12,6 +12,13 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-script",
+  display: "swap",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${spaceGrotesk.variable} ${playfair.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

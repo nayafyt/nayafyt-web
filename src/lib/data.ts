@@ -94,6 +94,33 @@ export const projects = [
   },
 ];
 
+export const currently = [
+  {
+    icon: "FlaskConical",
+    label: "Researching",
+    text: "Physics-guided neural networks",
+    rotation: "-rotate-2",
+  },
+  {
+    icon: "Layers",
+    label: "Building",
+    text: "Enterprise Java & React apps",
+    rotation: "rotate-1",
+  },
+  {
+    icon: "Workflow",
+    label: "Learning",
+    text: "Modular ML pipeline design",
+    rotation: "rotate-2",
+  },
+  {
+    icon: "Compass",
+    label: "Interested in",
+    text: "Where engineering meets science",
+    rotation: "-rotate-1",
+  },
+];
+
 export const volunteer = [
   {
     org: "The Smile of the Child",
