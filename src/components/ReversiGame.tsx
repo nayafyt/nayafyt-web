@@ -50,7 +50,7 @@ export default function ReversiGame() {
                     <ReversiBoardComponent
                         board={Array(8).fill(Array(8).fill(0))}
                         availableMoves={[]}
-                        onCellClick={() => {}}
+                        onCellClick={() => { }}
                         disabled={true}
                     />
                 </div>
