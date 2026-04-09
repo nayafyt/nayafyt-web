@@ -39,7 +39,8 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--font-heading);
 }
 
@@ -82,20 +83,318 @@ h1, h2 {
 }
 
 /* Staggered children */
-.stagger-children .animate-on-scroll:nth-child(1) { transition-delay: 0ms; }
-.stagger-children .animate-on-scroll:nth-child(2) { transition-delay: 100ms; }
-.stagger-children .animate-on-scroll:nth-child(3) { transition-delay: 200ms; }
-.stagger-children .animate-on-scroll:nth-child(4) { transition-delay: 300ms; }
-.stagger-children .animate-on-scroll:nth-child(5) { transition-delay: 400ms; }
-.stagger-children .animate-on-scroll:nth-child(6) { transition-delay: 500ms; }
-.stagger-children .animate-on-scroll:nth-child(7) { transition-delay: 600ms; }
-.stagger-children .animate-on-scroll:nth-child(8) { transition-delay: 700ms; }
+.stagger-children .animate-on-scroll:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(7) {
+  transition-delay: 600ms;
+}
+
+.stagger-children .animate-on-scroll:nth-child(8) {
+  transition-delay: 700ms;
+}
 
 /* Mood board card */
 .mood-card {
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Reversi Game Styles */
+.reversi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+}
+
+.reversi-game {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.game-info {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.player-label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.player-color {
+  font-size: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.player-score {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.vs {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-section {
+  text-align: center;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-text {
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.status-message {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.board-container {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.reversi-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.25rem;
+  background: #2d5a3d;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  aspect-ratio: 1;
+}
+
+.reversi-cell {
+  aspect-ratio: 1;
+  background: #4a7c5a;
+  border: 1px solid #3d6a4b;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.reversi-cell:hover {
+  background: #5a8c6a;
+}
+
+.reversi-cell.available {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px var(--color-accent);
+}
+
+.reversi-cell.available:hover {
+  box-shadow: inset 0 0 0 2px var(--color-accent), 0 0 8px rgba(30, 58, 95, 0.4);
+}
+
+.reversi-cell.last-move {
+  box-shadow: inset 0 0 0 3px #FFD700;
+}
+
+.disc {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: discPlace 0.3s ease-in-out;
+}
+
+.disc.black {
+  background: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.disc.white {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes discPlace {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.game-over {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.game-over-content {
+  background: var(--color-bg-alt);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-accent);
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-over-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.game-over-score {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.new-game-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.new-game-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+}
+
+.new-game-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: center;
+}
+
+.new-game-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+}
+
+.setup-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .reversi-board {
+    gap: 0.15rem;
+    padding: 0.375rem;
+  }
+
+  .game-info {
+    padding: 1rem;
+  }
+
+  .info-section {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .player-score {
+    font-size: 1.25rem;
+  }
+
+  .board-container {
+    padding: 1rem;
+  }
 }
 
 .mood-card:hover {

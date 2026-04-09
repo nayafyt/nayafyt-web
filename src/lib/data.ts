@@ -74,13 +74,13 @@ export const projects = [
     link: "https://github.com/nayafyt/IMDB-Review-Classifier",
   },
   {
-    title: "Reversi Game Implementation",
-    tech: ["Python"],
+    title: "Reversi — Online",
+    tech: ["React", "Java", "Spring Boot"],
     description:
-      "Console-based Reversi with a minimax AI opponent and heuristic board evaluation.",
+      "Play Reversi online against an intelligent computer opponent with adjustable difficulty levels.",
     highlight:
-      "Built the AI from scratch - a great exercise in game trees and thinking about search depth trade-offs.",
-    link: "https://github.com/nayafyt/Reversi",
+      "Full-stack implementation with minimax AI, online UI with real-time game state, and game setup wizard.",
+    link: "/projects/reversi",
   },
   {
     title: "Technico E-Shop",
