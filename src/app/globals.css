@@ -130,18 +130,46 @@ html.dark .cursor-dot {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  padding: 2rem 1rem;
+}
+
+.reversi-page-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reversi-header {
+  text-align: center;
+}
+
+.reversi-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.reversi-description {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
 .reversi-game-init {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.2;
+  opacity: 0.15;
   pointer-events: none;
+  z-index: 0;
 }
 
 .reversi-game {
@@ -385,8 +413,7 @@ html.dark .cursor-dot {
 }
 
 .setup-overlay {
-  position: fixed;
-  inset: 0;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -402,6 +429,61 @@ html.dark .cursor-dot {
   padding: 1.25rem;
   max-width: 350px;
   width: 100%;
+}
+
+.reversi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.info-section-text {
+  text-align: center;
+}
+
+.info-section-text h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.info-section-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.info-section-text strong {
+  color: var(--color-accent);
+}
+
+.tech-stack-section {
+  text-align: center;
+}
+
+.tech-stack-section h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {

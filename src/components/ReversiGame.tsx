@@ -46,16 +46,44 @@ export default function ReversiGame() {
     if (!gameStarted || !gameState) {
         return (
             <div className="reversi-container">
-                <div className="reversi-game-init">
-                    <ReversiBoardComponent
-                        board={Array(8).fill(Array(8).fill(0))}
-                        availableMoves={[]}
-                        onCellClick={() => { }}
-                        disabled={true}
-                    />
-                </div>
-                <div className="setup-overlay">
-                    <ReversiGameSetup onStartGame={handleStartGame} isLoading={isLoading} />
+                <div className="reversi-page-content">
+                    <div className="reversi-header">
+                        <h1 className="reversi-title">Reversi</h1>
+                        <p className="reversi-description">
+                            Play Reversi (also known as Othello) online against an intelligent computer opponent. Choose your difficulty level and enjoy a classic strategy board game with a modern twist.
+                        </p>
+                    </div>
+
+                    <div className="reversi-game-init">
+                        <ReversiBoardComponent
+                            board={Array(8).fill(Array(8).fill(0))}
+                            availableMoves={[]}
+                            onCellClick={() => { }}
+                            disabled={true}
+                        />
+                    </div>
+
+                    <div className="setup-overlay">
+                        <ReversiGameSetup onStartGame={handleStartGame} isLoading={isLoading} />
+                    </div>
+
+                    <div className="reversi-info">
+                        <div className="info-section-text">
+                            <h2>How to Play</h2>
+                            <p><strong>Objective:</strong> Capture your opponent's pieces by trapping them between your own discs.</p>
+                            <p><strong>Gameplay:</strong> Click to place your disc on the board. Valid moves are highlighted. The player with the most pieces when no more moves are available wins.</p>
+                            <p><strong>Difficulty:</strong> Choose from Easy, Medium, or Hard AI opponents using minimax search with heuristic board evaluation.</p>
+                        </div>
+
+                        <div className="tech-stack-section">
+                            <h2>Tech Stack</h2>
+                            <div className="tech-stack-list">
+                                {["React", "TypeScript", "Minimax Algorithm", "JavaScript Game Logic", "Tailwind CSS"].map((tech) => (
+                                    <span key={tech} className="tech-badge">{tech}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
