@@ -44,9 +44,12 @@ h2 {
   font-family: var(--font-heading);
 }
 
-/* Custom cursor — pointer devices only */
+/* Custom cursor — pointer devices only, only on interactive elements */
 @media (pointer: fine) {
-  * {
+  button,
+  a,
+  [role="button"],
+  .reversi-cell.available {
     cursor: none !important;
   }
 }
@@ -128,12 +131,24 @@ h2 {
 
 /* Reversi Game Styles */
 .reversi-container {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
   background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+}
+
+.reversi-game-init {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .reversi-game {
@@ -390,6 +405,17 @@ h2 {
 .new-game-button:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+}
+
+.setup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 50;
+  background: transparent;
 }
 
 .setup-card {

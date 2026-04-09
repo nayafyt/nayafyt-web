@@ -46,7 +46,17 @@ export default function ReversiGame() {
     if (!gameStarted || !gameState) {
         return (
             <div className="reversi-container">
-                <ReversiGameSetup onStartGame={handleStartGame} isLoading={isLoading} />
+                <div className="reversi-game-init">
+                    <ReversiBoardComponent
+                        board={Array(8).fill(Array(8).fill(0))}
+                        availableMoves={[]}
+                        onCellClick={() => {}}
+                        disabled={true}
+                    />
+                </div>
+                <div className="setup-overlay">
+                    <ReversiGameSetup onStartGame={handleStartGame} isLoading={isLoading} />
+                </div>
             </div>
         );
     }
