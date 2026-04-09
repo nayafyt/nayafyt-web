@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { RotateCcw } from "lucide-react";
 import ReversiBoardComponent from "./ReversiBoard";
 import ReversiGameSetup from "./ReversiGameSetup";
@@ -12,6 +12,12 @@ export default function ReversiGame() {
     const [gameState, setGameState] = useState<GameState | null>(null);
     const [gameStarted, setGameStarted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [showHowToPlay, setShowHowToPlay] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        containerRef.current?.scrollIntoView({ block: "center" });
+    }, []);
 
     const handleStartGame = (playerColor: "W" | "B", level: number) => {
         setIsLoading(true);
@@ -45,7 +51,7 @@ export default function ReversiGame() {
 
     if (!gameStarted || !gameState) {
         return (
-            <div className="reversi-container">
+            <div className="reversi-container" ref={containerRef}>
                 <div className="reversi-page-content">
                     <div className="reversi-header">
                         <h1 className="reversi-title">Reversi</h1>
@@ -63,27 +69,40 @@ export default function ReversiGame() {
                         />
                     </div>
 
+                    <button
+                        className="help-button"
+                        onClick={() => setShowHowToPlay(true)}
+                        title="How to Play"
+                    >
+                        ?
+                    </button>
+
                     <div className="setup-overlay">
                         <ReversiGameSetup onStartGame={handleStartGame} isLoading={isLoading} />
                     </div>
 
-                    <div className="reversi-info">
-                        <div className="info-section-text">
-                            <h2>How to Play</h2>
-                            <p><strong>Objective:</strong> Capture your opponent's pieces by trapping them between your own discs.</p>
-                            <p><strong>Gameplay:</strong> Click to place your disc on the board. Valid moves are highlighted. The player with the most pieces when no more moves are available wins.</p>
-                            <p><strong>Difficulty:</strong> Choose from Easy, Medium, or Hard AI opponents using minimax search with heuristic board evaluation.</p>
-                        </div>
-
-                        <div className="tech-stack-section">
-                            <h2>Tech Stack</h2>
-                            <div className="tech-stack-list">
-                                {["React", "TypeScript", "Minimax Algorithm", "JavaScript Game Logic", "Tailwind CSS"].map((tech) => (
-                                    <span key={tech} className="tech-badge">{tech}</span>
-                                ))}
-                            </div>
+                    <div className="tech-stack-section">
+                        <h2>Tech Stack</h2>
+                        <div className="tech-stack-list">
+                            {["React", "TypeScript", "Minimax Algorithm", "JavaScript Game Logic", "Tailwind CSS"].map((tech) => (
+                                <span key={tech} className="tech-badge">{tech}</span>
+                            ))}
                         </div>
                     </div>
+
+                    {showHowToPlay && (
+                        <div className="info-modal" onClick={() => setShowHowToPlay(false)}>
+                            <div className="info-modal-content" onClick={(e) => e.stopPropagation()}>
+                                <button className="info-modal-close" onClick={() => setShowHowToPlay(false)}>×</button>
+                                <div className="info-section-text">
+                                    <h2>How to Play</h2>
+                                    <p><strong>Objective:</strong> Capture your opponent's pieces by trapping them between your own discs.</p>
+                                    <p><strong>Gameplay:</strong> Click to place your disc on the board. Valid moves are highlighted. The player with the most pieces when no more moves are available wins.</p>
+                                    <p><strong>Difficulty:</strong> Choose from Easy, Medium, or Hard AI opponents using minimax search with heuristic board evaluation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         );
@@ -94,7 +113,7 @@ export default function ReversiGame() {
     const currentPlayer = gameState.gameOver ? "Game Over" : "Your Turn";
 
     return (
-        <div className="reversi-container">
+        <div className="reversi-container" ref={containerRef}>
             <div className="reversi-game">
                 {/* Game Info */}
                 <div className="game-info">
@@ -132,6 +151,13 @@ export default function ReversiGame() {
 
                 {/* Game Board */}
                 <div className="board-container">
+                    <button
+                        className="help-button"
+                        onClick={() => setShowHowToPlay(true)}
+                        title="How to Play"
+                    >
+                        ?
+                    </button>
                     <ReversiBoardComponent
                         board={gameState.board}
                         availableMoves={gameState.availableMoves}
@@ -175,6 +201,20 @@ export default function ReversiGame() {
                     <RotateCcw size={18} />
                     New Game
                 </button>
+
+                {showHowToPlay && (
+                    <div className="info-modal" onClick={() => setShowHowToPlay(false)}>
+                        <div className="info-modal-content" onClick={(e) => e.stopPropagation()}>
+                            <button className="info-modal-close" onClick={() => setShowHowToPlay(false)}>×</button>
+                            <div className="info-section-text">
+                                <h2>How to Play</h2>
+                                <p><strong>Objective:</strong> Capture your opponent's pieces by trapping them between your own discs.</p>
+                                <p><strong>Gameplay:</strong> Click to place your disc on the board. Valid moves are highlighted. The player with the most pieces when no more moves are available wins.</p>
+                                <p><strong>Difficulty:</strong> Choose from Easy, Medium, or Hard AI opponents using minimax search with heuristic board evaluation.</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
