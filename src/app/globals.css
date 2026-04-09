@@ -55,26 +55,18 @@ h2 {
 }
 
 .cursor-dot {
-  width: 12px;
-  height: 12px;
-  background: var(--color-accent);
+  width: 10px;
+  height: 10px;
+  background: #1E3A5F;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
-  transition: width 0.15s ease, height 0.15s ease, background 0.15s ease, opacity 0.15s ease;
-  box-shadow: 0 0 8px rgba(30, 58, 95, 0.4), 0 0 16px rgba(30, 58, 95, 0.2);
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
 }
 
-.cursor-dot.hovering {
-  width: 48px;
-  height: 48px;
-  background: rgba(30, 58, 95, 0.1);
-  border: 2px solid var(--color-accent);
-  box-shadow: 0 0 12px rgba(30, 58, 95, 0.5), 0 0 24px rgba(30, 58, 95, 0.3), inset 0 0 8px rgba(30, 58, 95, 0.2);
-  opacity: 1;
+html.dark .cursor-dot {
+  background: #A5B8D4;
 }
 
 /* Scroll-triggered animations */
@@ -273,30 +265,12 @@ h2 {
 .reversi-cell.available {
   cursor: pointer;
   box-shadow: inset 0 0 0 2px var(--color-accent), 0 0 12px rgba(30, 58, 95, 0.35);
-  animation: pulse-ring 2s infinite;
 }
 
 .reversi-cell.available:hover {
   box-shadow: inset 0 0 0 2.5px var(--color-accent), 0 0 16px rgba(30, 58, 95, 0.5), 0 0 8px rgba(30, 58, 95, 0.3);
   background: #6a9c7a;
   transform: scale(1.05);
-  animation: none;
-}
-
-.reversi-cell.last-move {
-  box-shadow: inset 0 0 0 3px #FFD700, 0 0 8px rgba(255, 215, 0, 0.3);
-}
-
-@keyframes pulse-ring {
-  0% {
-    box-shadow: inset 0 0 0 2px var(--color-accent), 0 0 12px rgba(30, 58, 95, 0.35);
-  }
-  50% {
-    box-shadow: inset 0 0 0 2px var(--color-accent), 0 0 16px rgba(30, 58, 95, 0.5);
-  }
-  100% {
-    box-shadow: inset 0 0 0 2px var(--color-accent), 0 0 12px rgba(30, 58, 95, 0.35);
-  }
 }
 
 .disc {
