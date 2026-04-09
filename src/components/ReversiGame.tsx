@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { RotateCcw } from "lucide-react";
 import ReversiBoardComponent from "./ReversiBoard";
 import ReversiGameSetup from "./ReversiGameSetup";
-import { GameService } from "../../../Reversi/frontend/src/lib/reversi/GameService";
-import { GameState, GameConfig } from "../../../Reversi/frontend/src/lib/reversi/types";
+import { GameService } from "@/lib/reversi/GameService";
+import { GameState, GameConfig } from "@/lib/reversi/types";
 
 export default function ReversiGame() {
     const [gameService, setGameService] = useState<GameService | null>(null);

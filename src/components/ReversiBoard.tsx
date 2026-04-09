@@ -22,7 +22,7 @@ export default function ReversiBoardComponent({
     disabled,
 }: ReversiBoard) {
     const isAvailable = (r: number, c: number) =>
-        availableMoves.some(([mr, mc]) => mr === r && mc === c);
+        availableMoves.some(({ row: mr, col: mc }) => mr === r && mc === c);
 
     const isLastMove = (r: number, c: number) =>
         lastMove && lastMove.row === r && lastMove.col === c;

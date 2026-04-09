@@ -81,36 +81,3 @@ export default function ReversiProject() {
         </main>
     );
 }
-className = "px-4 py-2 rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)] border border-[var(--color-accent)]/20 text-sm font-medium"
-    >
-    { tech }
-                                </span >
-                            ))}
-                        </div >
-                    </div >
-
-    <div className="flex gap-4">
-        <a
-            href="https://nayafyt.github.io/Reversi/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-black rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200"
-        >
-            Play Now
-            <ExternalLink size={18} />
-        </a>
-        <a
-            href="https://github.com/nayafyt/Reversi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-bg-alt)] text-[var(--color-text)] border border-[var(--color-border)] rounded-lg font-semibold hover:border-[var(--color-accent)] transition-colors"
-        >
-            View Source
-            <ExternalLink size={18} />
-        </a>
-    </div>
-                </div >
-            </div >
-        </main >
-    );
-}
